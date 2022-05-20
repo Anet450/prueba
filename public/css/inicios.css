@@ -73,7 +73,6 @@ th{
     border-bottom: 1px solid #03101E;
 }
 
-
 .slider {
 	width: 100%;
 	margin: auto;
@@ -119,3 +118,16 @@ th{
     margin-left: 200px; 
 
 }
+
+a:link {
+    text-decoration:none;
+    color: black;
+}
+
+a:visited {
+    text-decoration:none;
+    color: black;
+}
+a:focus {
+    border: 1px solid #126B69;
+  }

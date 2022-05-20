@@ -17,10 +17,20 @@
 
     @if (Route::has('login'))
                 <div class="menu" >
-                    <a href="reservacion/create" class="d">NEW RESERVATION</a>
+                    <a href="reservacion/create" 
+                    style=" display: inline-block;
+                        color: white;
+                        font-family: 'Times New Roman', Times, serif;
+                        border: 1px solid #fdfdfd;
+                        ">NEW RESERVATION</a>
                     
                     @auth
-                        <a href="{{ url('reservacion') }}" class="d">HOME</a>
+                        <a href="{{ url('reservacion') }}" 
+                        style=" display: inline-block;
+                        color: white;
+                        font-family: 'Times New Roman', Times, serif;
+                        border: 1px solid #fdfdfd;
+                        ">HOME</a>
                    
                         <form method="POST" action="{{ route('logout') }}">
                          @csrf
@@ -33,10 +43,20 @@
                         </div>
                     </form>
     @else
-                        <a href="{{ route('login') }}" class="d">LOG IN</a>
+                        <a href="{{ route('login') }}" 
+                        style=" display: inline-block;
+                        color: white;
+                        font-family: 'Times New Roman', Times, serif;
+                        border: 1px solid #fdfdfd;
+                        ">LOG IN</a>
                      
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="d">REGISTER</a>
+                            <a href="{{ route('register') }}" 
+                            style=" display: inline-block;
+                            color: white;
+                            font-family: 'Times New Roman', Times, serif;
+                            border: 1px solid #fdfdfd;
+                        ">REGISTER</a>
                         @endif
                     @endauth
                 </div>
@@ -69,21 +89,47 @@
                 <td>{{$reservacion->costo}}</td>
                 <td>
                     @can('view', $reservacion)
-                    <a href="reservacion/{{$reservacion->id}}">Detalles </a>
-                    <br>
-                    <a href="reservacion/{{$reservacion->id}}/edit">EDIT</a>
+                    <a href="reservacion/{{$reservacion->id}}"style=" 
+                        font-size: 95%;
+                        text-decoration:none;
+                        border: 1px solid #fdfdfd;
+                        color: black;
+                    ">Detalles </a>
+                    <a href="reservacion/{{$reservacion->id}}/edit" style=" 
+                        font-size: 95%;
+                        text-decoration:none;
+                        border: 1px solid #fdfdfd;
+                        color: black;
+                    ">Edit</a>
 
                     <form action="/reservacion/{{$reservacion->id}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="DELETE" class="botton">
+                        <input type="submit" value="Eliminar" 
+                        style="text-decoration:none;
+                        border: 1px solid #fdfdfd;
+                        color: black;">
+                    </form>
+                    <form action="archivo" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="reservacion_id" value="{{$reservacion->id}}">
+                        <input type="file" name="archivos[]" multiple accept="image/*" style=" 
+                        text-decoration:none;
+                        border: 1px solid #fdfdfd;
+                        color: black;" >
+                        <input type="submit" value="Enviar" 
+                        style=" 
+                        text-decoration:none;
+                        border: 1px solid #fdfdfd;
+                        color: black;"
+                        >
                     </form>
                     @endcan
                 </td>
             </tr>
         @endforeach
     </table>
-
+    </div>
     <div class = "lineaA"> 
     <img src="https://i.pinimg.com/originals/fd/ed/0d/fded0d1dd49a00d37107588ff85cccfc.jpg" class ="logo">
         <div class = "slider">
@@ -120,11 +166,11 @@
             <h2 class="lineaA">
             Ing: Daniel Alejandro Plata Montes | Ing: Anet Guadalupe Muñoz de Santaigo
             </h2><h2 class="lineaA">
-            Codigo: 21702954_____________| Codigo: 220289171
+            Codigo: 217029541_____________| Codigo: 220289171
             </h2><h2 class="lineaA">
             Seccion: D13________________                          | Seccion: D12
         </h2>
     </div>
-    </div>
+    
 </body>
 </html>

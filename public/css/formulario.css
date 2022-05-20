@@ -91,28 +91,26 @@ h1{
     font-size: 125%;
     font-family: 'Times New Roman', Times, serif;
     border: 2px solid #03101E;
+    text-align: center;
 }
 
-.reservaciones{
-    box-shadow: 0 4px 8px lightblue, o 6px 20px 0 rgba(0,0, 0,0.19);
-    float: left;
-    width: 350px;
+.galeria{
+    
     margin: auto;
+    box-shadow: 0 4px 8px #03101E, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 350px;
 }
 
-.foto img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+.galeria img{
+    width: 100%;
+    height: auto;
 }
 
-.reservaciones:hover{
-    border: 1px solid lightcyan;
+.galeria:hover{
+    border: 1px solid #03101E;
     transform: rotate(-3deg);
 }
 
 .pie{
-    color: white;
     text-align: center;
-    padding: 5px;
 }

@@ -69,16 +69,45 @@
                 <option value="{{$habitacion->id}}">{{$habitacion->tipo}}</option>
             @endforeach
         </select>
-        </div>
-        <br>
-        <select name="servicio_id[]" multiple>
+       
+        <select name="servicio_id[]" multiple class="otro">
             @foreach ($servicios as $servicio)
                 <option value="{{$servicio->id}}">{{$servicio->servicio}}</option>
             @endforeach
-        </select><br>
+        </select>
+        </div>
+        <br>
+        <div class="botton">
         <input type="submit" value="Enviar">
+        </div>
 
     </form>
+    <div class="contenedor">
+        <div class="galeria">
+            <div class="foto">
+            <img src="https://i.pinimg.com/originals/dd/28/ba/dd28bab35af7dc19b23429a4e588f8d5.jpg">
+            </div>
+            <div class="pie">
+                <p> Habitacion Lujosa </p>
+            </div>
+        </div>
+        <div class="galeria">
+            <div class="foto">
+            <img src=" https://i.pinimg.com/originals/30/83/5b/30835ba302333e8ea4b70f09b8b186dd.jpg">
+            </div>
+            <div class="pie">
+                <p> Habitacion Ejecutivo </p>
+            </div>
+        </div>
+        <div class="galeria">
+            <div class="foto">
+            <img src="https://i.pinimg.com/originals/8b/8c/51/8b8c514701406afc3784c6a8d11caddd.jpg" >
+            </div>
+            <div class="pie">
+                <p> Habitacion Sencilla </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 <footer>
@@ -89,7 +118,7 @@
                         <h2 class="lineaA">
                         Ing: Daniel Alejandro Plata Montes | Ing: Anet Guadalupe Muñoz de Santaigo
                         </h2><h2 class="lineaA">
-                        Codigo: 21702954_____________| Codigo: 220289171
+                        Codigo: 217029541_____________| Codigo: 220289171
                         </h2><h2 class="lineaA">
                         Seccion: D13________________ | Seccion: D12
                     </h2>
